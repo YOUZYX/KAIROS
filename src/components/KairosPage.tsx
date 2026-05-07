@@ -326,16 +326,12 @@ export default function KairosPage() {
                   onChange={(e) => updateOtherTalentVisibility(e.target.value)}
                 >
                   <option value="">{t.talentDefault}</option>
-                  <option value="graffiti">Graffiti</option>
-                  <option value="dessin">Dessin</option>
-                  <option value="sketching">Sketching</option>
-                  <option value="painting">Painting</option>
-                  <option value="digital-art">Digital Art</option>
-                  <option value="calligraphy">Calligraphy</option>
-                  <option value="photography">Photography</option>
-                  <option value="music">Music</option>
-                  <option value="dance">Dance / Breakdance</option>
-                  <option value="poetry">Poetry</option>
+                  <option value="arts_plastiques">الفنون التشكيلية / Arts plastiques</option>
+                  <option value="theatre_cinema">المسرح والسينما / Théâtre et cinéma</option>
+                  <option value="musique_chant">الموسيقى والغناء / Musique et chant</option>
+                  <option value="ecriture_lecture_poesie">الشعر، الكتابة والقراءة / Écriture, lecture et poésie</option>
+                  <option value="organisation_logistique">التنظيم واللوجستيك / Organisation et logistique</option>
+                  <option value="design_photo_montage">التصميم، التصوير والمونتاج / Design, photographie et montage</option>
                   <option value="other">{t.talentOther}</option>
                 </select>
                 <span className="error-msg">{t.talentErr}</span>
