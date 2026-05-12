@@ -260,7 +260,6 @@ export default function KairosPage() {
       <main className="hero">
         <div className="hero-content">
           <img src="/assets/fulllogo.png" alt="KAIROS Logo" className="logo" />
-          {/* keep available if you want to re-enable later */}
           {/* <img src=\"/assets/kairos.png\" alt=\"KAIROS\" className=\"kairos-title\" /> */}
           <img src="/assets/tagline.png" alt="كولاب jUST كلوب ما كلوبش" className="tagline-img" />
         </div>
