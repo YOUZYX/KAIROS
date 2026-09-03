@@ -106,7 +106,7 @@ body::before {
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.96;
+    opacity: 0.3;
     background:
         repeating-linear-gradient(
             0deg,
@@ -136,7 +136,9 @@ body::before {
     background-position: 0 0, 0 22%, 0 0;
     background-repeat: repeat;
     mix-blend-mode: normal;
-    animation: backgroundInterference 3.2s steps(1, end) infinite;
+    animation:
+        backgroundInterference 3.2s steps(1, end) infinite,
+        glitchArtifactsCycle 6s steps(1, end) infinite;
 }
 
 .background-glitch::before,
@@ -285,76 +287,85 @@ body::before {
 @keyframes backgroundInterference {
     0%, 13%, 100% {
         transform: translateX(0) skewX(0);
-        opacity: 0.78;
+        opacity: 0.3;
         filter: contrast(1.05);
     }
     14% {
         transform: translateX(-4.5%) skewX(-0.7deg);
-        opacity: 1;
+        opacity: 0.3;
         filter: contrast(1.9);
         background-position: 0 0, 0 38%, 0 0;
     }
     15% {
         transform: translateX(3.8%) skewX(0.5deg);
-        opacity: 0.94;
+        opacity: 0.3;
         background-position: 0 0, -18% 22%, 0 0;
     }
     16% {
         transform: translateX(-2.4%) skewX(0deg);
-        opacity: 0.88;
+        opacity: 0.3;
         background-position: 0 0, 12% 9%, 0 0;
     }
     31% {
         transform: translateX(0);
-        opacity: 0.85;
+        opacity: 0.3;
         filter: contrast(1.1);
     }
     32% {
         transform: translateX(5.8%) skewX(0.35deg);
-        opacity: 1;
+        opacity: 0.3;
         filter: contrast(2);
         background-position: 0 0, -26% 64%, 0 0;
     }
     33% {
         transform: translateX(-6.2%) skewX(-0.4deg);
-        opacity: 0.95;
+        opacity: 0.3;
         background-position: 0 0, 31% 14%, 0 0;
     }
     34% {
         transform: translateX(0);
-        opacity: 0.72;
+        opacity: 0.3;
         filter: contrast(1.1);
     }
     62% {
         transform: translateX(0);
-        opacity: 0.75;
+        opacity: 0.3;
     }
     63% {
         transform: translateX(-7.1%) skewX(-0.65deg);
-        opacity: 1;
+        opacity: 0.3;
         background-position: 0 0, 28% 74%, 0 0;
     }
     64% {
         transform: translateX(8.4%) skewX(0.7deg);
-        opacity: 0.92;
+        opacity: 0.3;
         background-position: 0 0, -34% 47%, 0 0;
     }
     65% {
         transform: translateX(-3%) skewX(0deg);
-        opacity: 0.76;
+        opacity: 0.3;
     }
     86% {
-        opacity: 0.84;
+        opacity: 0.3;
         filter: contrast(1.2);
     }
     87% {
-        opacity: 1;
+        opacity: 0.3;
         transform: translateX(4.2%);
         background-position: 0 0, 17% 31%, 0 0;
     }
     88% {
-        opacity: 0.7;
+        opacity: 0.3;
         transform: translateX(-2.8%);
+    }
+}
+
+@keyframes glitchArtifactsCycle {
+    0%, 49.999% {
+        visibility: visible;
+    }
+    50%, 100% {
+        visibility: hidden;
     }
 }
 
