@@ -106,7 +106,7 @@ body::before {
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.3;
+    opacity: 0.2;
     background:
         repeating-linear-gradient(
             0deg,
@@ -287,75 +287,75 @@ body::before {
 @keyframes backgroundInterference {
     0%, 13%, 100% {
         transform: translateX(0) skewX(0);
-        opacity: 0.3;
+        opacity: 0.2;
         filter: contrast(1.05);
     }
     14% {
         transform: translateX(-4.5%) skewX(-0.7deg);
-        opacity: 0.3;
+        opacity: 0.2;
         filter: contrast(1.9);
         background-position: 0 0, 0 38%, 0 0;
     }
     15% {
         transform: translateX(3.8%) skewX(0.5deg);
-        opacity: 0.3;
+        opacity: 0.2;
         background-position: 0 0, -18% 22%, 0 0;
     }
     16% {
         transform: translateX(-2.4%) skewX(0deg);
-        opacity: 0.3;
+        opacity: 0.2;
         background-position: 0 0, 12% 9%, 0 0;
     }
     31% {
         transform: translateX(0);
-        opacity: 0.3;
+        opacity: 0.2;
         filter: contrast(1.1);
     }
     32% {
         transform: translateX(5.8%) skewX(0.35deg);
-        opacity: 0.3;
+        opacity: 0.2;
         filter: contrast(2);
         background-position: 0 0, -26% 64%, 0 0;
     }
     33% {
         transform: translateX(-6.2%) skewX(-0.4deg);
-        opacity: 0.3;
+        opacity: 0.2;
         background-position: 0 0, 31% 14%, 0 0;
     }
     34% {
         transform: translateX(0);
-        opacity: 0.3;
+        opacity: 0.2;
         filter: contrast(1.1);
     }
     62% {
         transform: translateX(0);
-        opacity: 0.3;
+        opacity: 0.2;
     }
     63% {
         transform: translateX(-7.1%) skewX(-0.65deg);
-        opacity: 0.3;
+        opacity: 0.2;
         background-position: 0 0, 28% 74%, 0 0;
     }
     64% {
         transform: translateX(8.4%) skewX(0.7deg);
-        opacity: 0.3;
+        opacity: 0.2;
         background-position: 0 0, -34% 47%, 0 0;
     }
     65% {
         transform: translateX(-3%) skewX(0deg);
-        opacity: 0.3;
+        opacity: 0.2;
     }
     86% {
-        opacity: 0.3;
+        opacity: 0.2;
         filter: contrast(1.2);
     }
     87% {
-        opacity: 0.3;
+        opacity: 0.2;
         transform: translateX(4.2%);
         background-position: 0 0, 17% 31%, 0 0;
     }
     88% {
-        opacity: 0.3;
+        opacity: 0.2;
         transform: translateX(-2.8%);
     }
 }
