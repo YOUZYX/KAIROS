@@ -396,22 +396,6 @@ body::before {
     }
 }
 
-/* Form wavy pulse */
-@keyframes formWave {
-    0%, 85%, 100% {
-        transform: translate(0) skew(0);
-    }
-    86% {
-        transform: translate(2px, 0) skew(-0.3deg);
-    }
-    87% {
-        transform: translate(-2px, 0) skew(0.2deg);
-    }
-    88% {
-        transform: translate(0) skew(0);
-    }
-}
-
 /* Scanline flicker */
 @keyframes scanlineFlicker {
     0% { opacity: 0.85; }
@@ -432,7 +416,6 @@ body::before {
     position: relative;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    animation: formWave 6s infinite 0.5s;
 }
 
 .form-container::before {
