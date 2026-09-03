@@ -53,13 +53,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0, 0, 0, 0.15) 2px,
-        rgba(0, 0, 0, 0.15) 4px
-    );
+    background:
+        repeating-linear-gradient(0deg, transparent 0 2px, rgba(0, 0, 0, 0.22) 2px 4px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 5px);
     pointer-events: none;
     z-index: 0;
     animation: scanlineFlicker 0.1s infinite;
@@ -72,10 +68,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.04;
+    opacity: 0.12;
     pointer-events: none;
     z-index: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    mix-blend-mode: screen;
 }
 
 /* Vignette */
@@ -88,6 +85,39 @@ body::before {
     background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.7) 100%);
     pointer-events: none;
     z-index: 0;
+}
+
+/* Monochrome VHS interference over the background only */
+.background-glitch {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.2;
+    background:
+        repeating-linear-gradient(0deg, transparent 0 18vh, rgba(255, 255, 255, 0.08) 18vh 18.3vh, transparent 18.3vh 36vh),
+        repeating-linear-gradient(90deg, transparent 0 47%, rgba(255, 255, 255, 0.06) 47% 47.15%, transparent 47.15% 100%);
+    mix-blend-mode: screen;
+    animation: backgroundInterference 7s steps(1, end) infinite;
+}
+
+@keyframes backgroundInterference {
+    0%, 72%, 100% {
+        transform: translateX(0);
+        opacity: 0.12;
+    }
+    73% {
+        transform: translateX(-1.5%);
+        opacity: 0.28;
+    }
+    74% {
+        transform: translateX(1%);
+        opacity: 0.18;
+    }
+    75% {
+        transform: translateX(-0.5%);
+        opacity: 0.24;
+    }
 }
 
 /* ============ SOUND TOGGLE ============ */

@@ -237,6 +237,7 @@ export default function KairosPage() {
       <div className="scanlines" />
       <div className="noise" />
       <div className="vignette" />
+      <div className="background-glitch" aria-hidden="true" />
 
       <div className="glitch-slice glitch-slice-1" />
       <div className="glitch-slice glitch-slice-2" />
