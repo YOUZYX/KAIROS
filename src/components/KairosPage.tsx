@@ -239,10 +239,6 @@ export default function KairosPage() {
       <div className="vignette" />
       <div className="background-glitch" aria-hidden="true" />
 
-      <div className="glitch-slice glitch-slice-1" />
-      <div className="glitch-slice glitch-slice-2" />
-      <div className="glitch-slice glitch-slice-3" />
-
       <audio ref={bgMusicRef} id="bgMusic" src="/assets/background_music.mp3" loop preload="auto" />
 
       <button className={`sound-toggle ${musicPlaying ? "active" : ""}`} id="soundToggle" title="Toggle Sound" onClick={toggleSound}>
@@ -377,4 +373,3 @@ export default function KairosPage() {
     </>
   );
 }
-
