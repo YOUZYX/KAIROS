@@ -93,30 +93,58 @@ body::before {
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.2;
+    opacity: 0.72;
     background:
-        repeating-linear-gradient(0deg, transparent 0 18vh, rgba(255, 255, 255, 0.08) 18vh 18.3vh, transparent 18.3vh 36vh),
-        repeating-linear-gradient(90deg, transparent 0 47%, rgba(255, 255, 255, 0.06) 47% 47.15%, transparent 47.15% 100%);
-    mix-blend-mode: screen;
-    animation: backgroundInterference 7s steps(1, end) infinite;
+        linear-gradient(90deg, transparent 0 4%, #fff 4% 23%, transparent 23% 41%, #000 41% 68%, transparent 68%),
+        linear-gradient(90deg, #000 0 12%, transparent 12% 29%, #fff 29% 58%, transparent 58% 86%, #000 86%),
+        repeating-linear-gradient(0deg, transparent 0 7px, rgba(255, 255, 255, 0.92) 7px 10px, transparent 10px 19px);
+    background-size: 100% 19%, 100% 13%, 100% 100%;
+    background-position: 0 9%, 0 71%, 0 0;
+    background-repeat: no-repeat, no-repeat, repeat;
+    mix-blend-mode: normal;
+    animation: backgroundInterference 5s steps(1, end) infinite;
 }
 
 @keyframes backgroundInterference {
-    0%, 72%, 100% {
-        transform: translateX(0);
-        opacity: 0.12;
+    0%, 58%, 100% {
+        transform: translateX(0) skewX(0);
+        opacity: 0.04;
+        filter: none;
     }
-    73% {
-        transform: translateX(-1.5%);
-        opacity: 0.28;
+    59% {
+        transform: translateX(-3%) skewX(-1deg);
+        opacity: 0.9;
+        filter: contrast(2.5);
     }
-    74% {
-        transform: translateX(1%);
+    60% {
+        transform: translateX(4%) skewX(1deg);
+        opacity: 0.72;
+    }
+    61% {
+        transform: translateX(-1%) skewX(0);
+        opacity: 0.98;
+        background-position: 0 42%, 0 18%, 0 0;
+    }
+    62% {
+        transform: translateX(2%);
         opacity: 0.18;
     }
-    75% {
-        transform: translateX(-0.5%);
-        opacity: 0.24;
+    78% {
+        transform: translateX(0);
+        opacity: 1;
+        background: #fff;
+    }
+    79% {
+        transform: translateX(0);
+        opacity: 0.95;
+        background: #000;
+    }
+    80% {
+        transform: translateX(-5%);
+        opacity: 0.85;
+        background:
+            linear-gradient(90deg, #fff 0 18%, transparent 18% 49%, #000 49% 81%, transparent 81%),
+            repeating-linear-gradient(0deg, #000 0 5px, #fff 5px 9px);
     }
 }
 
